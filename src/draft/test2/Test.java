@@ -9,5 +9,6 @@ public class Test {
         BigDog bigdog1 = (BigDog) animal1;
         dog1.greeting(bigdog1);
         bigdog1.greeting();
+
     }
 }

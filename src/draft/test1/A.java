@@ -10,6 +10,9 @@ public class A extends ABC {
     public void firstMethod(String b, int a) {
         System.out.println("this is from interface method 3");
     }
+    public void AMethod(String b, int a) {
+        System.out.println("this is from method A");
+    }
 
     public int getO() {
         return o;

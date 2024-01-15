@@ -5,10 +5,8 @@ package draft.test1;
 public class Main {
     public static void main(String[] args) {
         A a = new A();
-
+        ABC b = new A();
         int ig = 0;
-        String b = "o";
-
-        a.firstMethod(b, ig);
+//        a.firstMethod(b, ig);
     }
 }

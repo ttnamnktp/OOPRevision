@@ -1,12 +1,16 @@
-package w3.bai3;
+package w7.congty;
 
 public class NhanVien {
-    private String tenNhanVien;
-    private  double luongCoBan;
-    private  double heSoLuong;
+    protected String tenNhanVien;
+    protected  double luongCoBan;
+    protected  double heSoLuong;
     public final double LUONG_MAX = 100_000_000;
 
     public static int soNhanVien = 0;
+
+    public NhanVien(){
+
+    }
 
     public NhanVien(String tenNhanVien) {
         this.tenNhanVien = tenNhanVien;
@@ -77,6 +81,14 @@ public class NhanVien {
         return tongLuong;
     }
 
+    public static double tinhTongLuong(NhanVien []nhanViens, int length) {
+        double tongLuong = 0;
+        for (int i = 0; i < length; i++) {
+            tongLuong += nhanViens[i].tinhLuong();
+        }
+        return tongLuong;
+    }
+
     public static void main(String[] args) {
         NhanVien nv1 = new NhanVien("Hoa", 2000_000, 1.5);
         nv1.inTTin();
@@ -85,5 +97,7 @@ public class NhanVien {
         NhanVien nv2 = new NhanVien("Mai", 3000_000, 1.3);
         System.out.println(NhanVien.tinhTongLuong(nv1));
         System.out.println(NhanVien.tinhTongLuong(nv1, nv2));
+        NhanVien[] nhanViens = {nv1, nv2};
+        System.out.println(NhanVien.tinhTongLuong(nhanViens));
     }
 }

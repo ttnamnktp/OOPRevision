@@ -1,4 +1,4 @@
-package w3.bai3;
+package w6;
 
 public class NhanVien {
     private String tenNhanVien;
@@ -73,6 +73,14 @@ public class NhanVien {
         double tongLuong = 0;
         for (NhanVien nhanVien : nhanViens) {
             tongLuong += nhanVien.tinhLuong();
+        }
+        return tongLuong;
+    }
+
+    public static double tinhTongLuong(NhanVien []nhanViens, int length) {
+        double tongLuong = 0;
+        for (int i = 0; i < length; i++) {
+            tongLuong += nhanViens[i].tinhLuong();
         }
         return tongLuong;
     }
