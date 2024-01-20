@@ -85,6 +85,11 @@ public class NhanVien {
         return tongLuong;
     }
 
+    public static double tinhTongLuong(int nhanViens, NhanVien length) {
+        return 0;
+    }
+
+
     public static void main(String[] args) {
         NhanVien nv1 = new NhanVien("Hoa", 2000_000, 1.5);
         nv1.inTTin();
