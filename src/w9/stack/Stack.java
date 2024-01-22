@@ -30,7 +30,7 @@ public class Stack<T> {
         return (T) elements[size - 1];
     }
 
-    public boolean push(T element) {
+    public <T> boolean push(T element) {
         if (isFull()) return false;
         elements[size] = element;
         size++;
